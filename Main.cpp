@@ -17,6 +17,12 @@ const char* fragmentShaderSource = "#version 330 core\n"
 "	FragColor = vec4(0.8f, 0.3f, 0.02f, 1.0f);\n"
 "}\n\0";
 
+void processInput(GLFWwindow* window)
+{
+	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+		glfwSetWindowShouldClose(window, true);
+}
+
 int main()
 {
 	// Initialize GLFW
@@ -123,6 +129,10 @@ int main()
 	// main while loop so the window doesn't close immediately
 	while (!glfwWindowShouldClose(window))
 	{
+		// Process Input (currently just escape -> exit)
+		processInput(window);
+
+		// Set BG color
 		glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 		// Tell OpenGL which Shader Program we want to use
