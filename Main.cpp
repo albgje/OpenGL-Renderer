@@ -41,14 +41,15 @@ int main()
 	{
 		0.5f,  0.5f, 0.0f,  // top right
 		0.5f, -0.5f, 0.0f,  // bottom right
-		-0.5f, -0.5f, 0.0f,  // bottom left
-		-0.5f,  0.5f, 0.0f   // top left 
+		-0.5f, -0.5f, 0.0f, // bottom left
+		-0.5f,  0.5f, 0.0f, // top left 
+		-1.0f, -1.0f, 0.0f  //other
 	};
 
 	unsigned int indices[] =
 	{
-		0, 1, 3,
-		1, 2, 3
+		0, 1, 3, // 0, 1, 3
+		1, 2, 3  // 1, 2, 4
 	};
 
 	// Create a GLFWindow object of 800 by 800 named "OpenGL First Window"
@@ -136,6 +137,8 @@ int main()
 	glClear(GL_COLOR_BUFFER_BIT);
 	// Swap the back buffer with the front buffer
 	glfwSwapBuffers(window);
+
+	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
 	// main while loop so the window doesn't close immediately
 	while (!glfwWindowShouldClose(window))
