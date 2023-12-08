@@ -87,47 +87,47 @@ int main()
 	};
 
 	float vertices10[] = {
-		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f,
-		 0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f,
-		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 0.0f,
-		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 0.0f,
-		-0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 0.0f,
-		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f,
+		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f, // left bottom back
+		 0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f, // right bottom back
+		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 0.0f, // right top back
+		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 0.0f, // right top back
+		-0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 0.0f, // left top back
+		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f, // left bottom back
 
-		-0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
-		 0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
-		 0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
-		 0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
-		-0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
-		-0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
+		-0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f, // left bottom front
+		 0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f, // right bottom front
+		 0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f, // right top front
+		 0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f, // right top front
+		-0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f, // left top front
+		-0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f, // left bottom front
 
-		-0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f,
-		-0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f,
-		-0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f,
-		-0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f,
-		-0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f,
-		-0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f,
+		-0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f, // left top front
+		-0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f, // left top back
+		-0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f, // left bottom back
+		-0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f, // left bottom back
+		-0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f, // left bottom front
+		-0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f, // left top front
 
-		 0.5f,  0.5f,  0.5f,  0.0f, 0.0f, 1.0f,
-		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f,
-		 0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 1.0f,
-		 0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 1.0f,
-		 0.5f, -0.5f,  0.5f,  0.0f, 0.0f, 1.0f,
-		 0.5f,  0.5f,  0.5f,  0.0f, 0.0f, 1.0f,
+		 0.5f,  0.5f,  0.5f,  0.0f, 0.0f, 1.0f, // right top front
+		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f, // right top back
+		 0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 1.0f, // right bottom back
+		 0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 1.0f, // right bottom back
+		 0.5f, -0.5f,  0.5f,  0.0f, 0.0f, 1.0f, // right bottom front
+		 0.5f,  0.5f,  0.5f,  0.0f, 0.0f, 1.0f, // right top front
 
-		-0.5f, -0.5f, -0.5f,  1.0f, 1.0f, 0.0f,
-		 0.5f, -0.5f, -0.5f,  1.0f, 1.0f, 0.0f,
-		 0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f,
-		 0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f,
-		-0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f,
-		-0.5f, -0.5f, -0.5f,  1.0f, 1.0f, 0.0f,
+		-0.5f, -0.5f, -0.5f,  1.0f, 1.0f, 0.0f, // left bottom back
+		 0.5f, -0.5f, -0.5f,  1.0f, 1.0f, 0.0f, // right bottom back
+		 0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f, // right bottom front
+		 0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f, // right bottom front
+		-0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f, // left bottom front
+		-0.5f, -0.5f, -0.5f,  1.0f, 1.0f, 0.0f, // left bottom back
 
-		-0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 1.0f,
-		 0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 1.0f,
-		 0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 1.0f,
-		 0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 1.0f,
-		-0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 1.0f,
-		-0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 1.0f,
+		-0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 1.0f, // left top back
+		 0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 1.0f, // right top back
+		 0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 1.0f, // right top front
+		 0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 1.0f, // right top front
+		-0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 1.0f, // left top front
+		-0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 1.0f, // left top back
 	};
 
 	// Create reference containers for the Vertex Array Object and the Vertex Buffer Object
