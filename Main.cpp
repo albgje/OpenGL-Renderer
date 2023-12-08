@@ -232,6 +232,50 @@ int main()
 		-0.5f,  0.5f, -0.5f,  1.0f, 1.0f, 0.0f, // left top back
 	};
 
+	float vertices14[] = {
+		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f,
+		 0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f,
+		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 0.0f,
+		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 0.0f,
+		-0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 0.0f,
+		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f,
+
+		-0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
+		 0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
+		 0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
+		 0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
+		-0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
+		-0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
+
+		-0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f,
+		-0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f,
+		-0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f,
+		-0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f,
+		-0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f,
+		-0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f,
+
+		 0.5f,  0.5f,  0.5f,  0.0f, 0.0f, 1.0f,
+		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f,
+		 0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 1.0f,
+		 0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 1.0f,
+		 0.5f, -0.5f,  0.5f,  0.0f, 0.0f, 1.0f,
+		 0.5f,  0.5f,  0.5f,  0.0f, 0.0f, 1.0f,
+
+		-0.5f, -0.5f, -0.5f,  1.0f, 1.0f, 0.0f,
+		 0.5f, -0.5f, -0.5f,  1.0f, 1.0f, 0.0f,
+		 0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f,
+		 0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f,
+		-0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f,
+		-0.5f, -0.5f, -0.5f,  1.0f, 1.0f, 0.0f,
+
+		-0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 1.0f,
+		 0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 1.0f,
+		 0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 1.0f,
+		 0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 1.0f,
+		-0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 1.0f,
+		-0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 1.0f,
+	};
+
 	// Create reference containers for the Vertex Array Object and the Vertex Buffer Object
 	unsigned int VAO, VBO;
 	glGenVertexArrays(1, &VAO);
@@ -292,7 +336,7 @@ int main()
 	// Swap the back buffer with the front buffer
 	glfwSwapBuffers(window);
 
-	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
 	// main while loop so the window doesn't close immediately
 	while (!glfwWindowShouldClose(window))
