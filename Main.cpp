@@ -204,7 +204,7 @@ int main()
 
 		// transformations
 		glm::mat4 transform = glm::mat4(1.0f);
-		transform = glm::rotate(transform, (float)glfwGetTime()*3.0f, glm::vec3(0.0f, 2.0f, 1.0f));
+		transform = glm::rotate(transform, (float)glfwGetTime()*0.1f, glm::vec3(-0.01f, 0.02f, 0.0f));
 
 		// Tell OpenGL which Shader Program we want to use
 		//glUseProgram(shaderProgram);
