@@ -80,13 +80,159 @@ int main()
 		0.5f,   0.5f, 0.0f,   1.0f, 0.0f, 0.0f, // right top left
 	};
 
-	unsigned int indices[] =
-	{
+	unsigned int indices[] = {
 		0, 1, 3,
 		1, 2, 3,
 	};
 
+	float vertices216[] = {
+		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f, // left bottom back
+		 0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, // right bottom back
+		 0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f, // right top back
+		 0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f, // right top back
+		-0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f, // left top back
+		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f, // left bottom back
+
+
+		-0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f, // left bottom front
+		 0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 1.0f, // right bottom front
+		 0.5f,  0.5f,  0.5f,  1.0f, 1.0f, 1.0f, // right top front
+		 0.5f,  0.5f,  0.5f,  1.0f, 1.0f, 1.0f, // right top front
+		-0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 1.0f, // left top front
+		-0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f, // left bottom front
+
+
+		-0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 1.0f, // left top front
+		-0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f, // left top back
+		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f, // left bottom back
+		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f, // left bottom back
+		-0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f, // left bottom front
+		-0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 1.0f, // left top front
+
+
+		 0.5f,  0.5f,  0.5f,  1.0f, 1.0f, 1.0f, // right top front
+		 0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f, // right top back
+		 0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, // right bottom back
+		 0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, // right bottom back
+		 0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 1.0f, // right bottom front
+		 0.5f,  0.5f,  0.5f,  1.0f, 1.0f, 1.0f, // right top front
+
+
+		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f, // left bottom back
+		 0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, // right bottom back
+		 0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 1.0f, // right bottom front
+		 0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 1.0f, // right bottom front
+		-0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f, // left bottom front
+		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f, // left bottom back
+
+
+		-0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f, // left top back
+		 0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f, // right top back
+		 0.5f,  0.5f,  0.5f,  1.0f, 1.0f, 1.0f, // right top front
+		 0.5f,  0.5f,  0.5f,  1.0f, 1.0f, 1.0f, // right top front
+		-0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 1.0f, // left top front
+		-0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f, // left top back
+	};
+
+	float vertices108[] = {
+		-0.5f, -0.5f, -0.5f,  // left bottom back
+		 0.5f, -0.5f, -0.5f,  // right bottom back
+		 0.5f,  0.5f, -0.5f,  // right top back
+		 0.5f,  0.5f, -0.5f,  // right top back
+		-0.5f,  0.5f, -0.5f,  // left top back
+		-0.5f, -0.5f, -0.5f,  // left bottom back
+
+
+		-0.5f, -0.5f,  0.5f,  // left bottom front
+		 0.5f, -0.5f,  0.5f,  // right bottom front
+		 0.5f,  0.5f,  0.5f,  // right top front
+		 0.5f,  0.5f,  0.5f,  // right top front
+		-0.5f,  0.5f,  0.5f,  // left top front
+		-0.5f, -0.5f,  0.5f,  // left bottom front
+
+
+		-0.5f,  0.5f,  0.5f,  // left top front
+		-0.5f,  0.5f, -0.5f,  // left top back
+		-0.5f, -0.5f, -0.5f,  // left bottom back
+		-0.5f, -0.5f, -0.5f,  // left bottom back
+		-0.5f, -0.5f,  0.5f,  // left bottom front
+		-0.5f,  0.5f,  0.5f,  // left top front
+
+
+		 0.5f,  0.5f,  0.5f,  // right top front
+		 0.5f,  0.5f, -0.5f,  // right top back
+		 0.5f, -0.5f, -0.5f,  // right bottom back
+		 0.5f, -0.5f, -0.5f,  // right bottom back
+		 0.5f, -0.5f,  0.5f,  // right bottom front
+		 0.5f,  0.5f,  0.5f,  // right top front
+
+
+		-0.5f, -0.5f, -0.5f,  // left bottom back
+		 0.5f, -0.5f, -0.5f,  // right bottom back
+		 0.5f, -0.5f,  0.5f,  // right bottom front
+		 0.5f, -0.5f,  0.5f,  // right bottom front
+		-0.5f, -0.5f,  0.5f,  // left bottom front
+		-0.5f, -0.5f, -0.5f,  // left bottom back
+
+
+		-0.5f,  0.5f, -0.5f,  // left top back
+		 0.5f,  0.5f, -0.5f,  // right top back
+		 0.5f,  0.5f,  0.5f,  // right top front
+		 0.5f,  0.5f,  0.5f,  // right top front
+		-0.5f,  0.5f,  0.5f,  // left top front
+		-0.5f,  0.5f, -0.5f,  // left top back
+	};
+
 	float vertices10[] = {
+		-0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, // left bottom back
+		 0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f, // right bottom back
+		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f, // right top back
+		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f, // right top back
+		-0.5f,  0.5f, -0.5f,  1.0f, 1.0f, 0.0f, // left top back
+		-0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, // left bottom back
+
+
+		-0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 1.0f, // left bottom front
+		 0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f, // right bottom front
+		 0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 1.0f, // right top front
+		 0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 1.0f, // right top front
+		-0.5f,  0.5f,  0.5f,  1.0f, 1.0f, 1.0f, // left top front
+		-0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 1.0f, // left bottom front
+
+
+		-0.5f,  0.5f,  0.5f,  1.0f, 1.0f, 1.0f, // left top front
+		-0.5f,  0.5f, -0.5f,  1.0f, 1.0f, 0.0f, // left top back
+		-0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, // left bottom back
+		-0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, // left bottom back
+		-0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 1.0f, // left bottom front
+		-0.5f,  0.5f,  0.5f,  1.0f, 1.0f, 1.0f, // left top front
+
+
+		 0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 1.0f, // right top front
+		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f, // right top back
+		 0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f, // right bottom back
+		 0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f, // right bottom back
+		 0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f, // right bottom front
+		 0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 1.0f, // right top front
+
+
+		-0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, // left bottom back
+		 0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f, // right bottom back
+		 0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f, // right bottom front
+		 0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f, // right bottom front
+		-0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 1.0f, // left bottom front
+		-0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, // left bottom back
+
+
+		-0.5f,  0.5f, -0.5f,  1.0f, 1.0f, 0.0f, // left top back
+		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f, // right top back
+		 0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 1.0f, // right top front
+		 0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 1.0f, // right top front
+		-0.5f,  0.5f,  0.5f,  1.0f, 1.0f, 1.0f, // left top front
+		-0.5f,  0.5f, -0.5f,  1.0f, 1.0f, 0.0f, // left top back
+	};
+
+	float vertices14[] = {
 		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f,
 		 0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 0.0f,
 		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 0.0f,
@@ -137,12 +283,12 @@ int main()
 
 	glBindVertexArray(VAO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices10), vertices10, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices216), vertices216, GL_STATIC_DRAW);
 
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);	// Vertex attributes stay the same
 	glEnableVertexAttribArray(0);
 
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float))); // (void*)0 for vertices108
 	glEnableVertexAttribArray(1);
 	/*
 	unsigned int VAOs[2], VBOs[2], EBOs[2];
@@ -190,7 +336,7 @@ int main()
 	// Swap the back buffer with the front buffer
 	glfwSwapBuffers(window);
 
-	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
 	// main while loop so the window doesn't close immediately
 	while (!glfwWindowShouldClose(window))
@@ -199,12 +345,12 @@ int main()
 		processInput(window);
 
 		// Set BG color
-		glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
+		glClearColor(0.17f, 0.23f, 0.27f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		// transformations
 		glm::mat4 transform = glm::mat4(1.0f);
-		transform = glm::rotate(transform, (float)glfwGetTime()*0.1f, glm::vec3(-0.01f, 0.02f, 0.0f));
+		transform = glm::rotate(transform, (float)glfwGetTime()*0.7f, glm::vec3(sinf((float)glfwGetTime()/5.0f), sinf((float)glfwGetTime()/4.0f), tanf((float)glfwGetTime())));
 
 		// Tell OpenGL which Shader Program we want to use
 		//glUseProgram(shaderProgram);
