@@ -336,7 +336,7 @@ int main()
 	// Swap the back buffer with the front buffer
 	glfwSwapBuffers(window);
 
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
 	// main while loop so the window doesn't close immediately
 	while (!glfwWindowShouldClose(window))
@@ -347,6 +347,9 @@ int main()
 		// Set BG color
 		glClearColor(0.17f, 0.23f, 0.27f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		// orthographic projection
+		glm::ortho(0.0f, (float)WIDTH, 0.0f, (float)HEIGHT, 0.1f, 100.0f);
 
 		// transformations
 		glm::mat4 transform = glm::mat4(1.0f);
