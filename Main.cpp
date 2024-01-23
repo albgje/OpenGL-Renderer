@@ -431,7 +431,7 @@ int main()
 
 	glEnable(GL_DEPTH_TEST);
 
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
 	// main while loop so the window doesn't close immediately
 	while (!glfwWindowShouldClose(window))
