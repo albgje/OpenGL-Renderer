@@ -11,14 +11,15 @@
 
 const unsigned int WIDTH = 800;
 const unsigned int HEIGHT = 800;
-const float SPEED = 0.01f;
+const float SPEED = 0.005f;
 
 float rotationDegrees = 0.0f;
 float fov = 90.0f;
 float nearF = 0.1f;
-float zZ = -3.0;
-float yY = 1.0f;
-float xX = 0.0f;
+float farF = 100.0f;
+float zZ = 0.0;
+float yY = 0.0f;
+float xX = -3.0f;
 
 void processInput(GLFWwindow* window)
 {
@@ -26,22 +27,22 @@ void processInput(GLFWwindow* window)
 		glfwSetWindowShouldClose(window, true);
 	}
 	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
-		zZ += SPEED;
+		xX += SPEED;
 	}
 	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
-		zZ -= SPEED;
+		xX -= SPEED;
 	}
 	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
-		xX -= SPEED;
+		zZ += SPEED;
 	}
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
-		xX -= SPEED;
-	}
-	if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) {
 		zZ -= SPEED;
 	}
+	if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) {
+		yY -= SPEED;
+	}
 	if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS) {
-		zZ += SPEED;
+		yY += SPEED;
 	}
 
 }
@@ -414,7 +415,7 @@ int main()
 
 		*/
 
-		// transformations (found)
+		/* transformations(found)
 
 		glm::mat4 rotation = glm::rotate(glm::mat4(1.0f), glm::radians(rotationDegrees), glm::vec3(sinf(glfwGetTime()), cosf(glfwGetTime()), 0.0f));
 		glm::mat4 modelTransform = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.5f, 0.0f));
@@ -429,6 +430,17 @@ int main()
 		glUniformMatrix4fv(transformLocation, 1, GL_FALSE, glm::value_ptr(modelview));
 		glUniformMatrix4fv(projectionLocation, 1, GL_FALSE, glm::value_ptr(projectionMatrix));
 
+		*/
+
+		shader.use();
+
+		glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(zZ, yY, xX));
+		glm::mat4 projection = glm::perspective(glm::radians(fov), (float)WIDTH / (float)HEIGHT, nearF, farF);
+
+
+		shader.setMat4("projection", projection);
+		shader.setMat4("view", view);
+
 
 		// Bind the VAO so OpenGL knows to use it
 		glBindVertexArray(VAO);
@@ -436,11 +448,12 @@ int main()
 			glm::mat4 model = glm::mat4(1.0f);
 			model = glm::translate(model, cubePositions[i]);
 			float angle = 20.0f * i;
-			model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 1.0f, 0.5f));
+			model = glm::rotate(model, glm::radians(rotationDegrees + i*50), glm::vec3(sinf(glfwGetTime() + i*8), cosf(glfwGetTime() + i*2), 0.0f));
 			shader.setMat4("model", model);
 
 			glDrawArrays(GL_TRIANGLES, 0, 36);
 		}
+		rotationDegrees += 0.05f;
 		//glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		/*
